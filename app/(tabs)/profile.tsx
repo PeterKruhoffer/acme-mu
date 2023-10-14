@@ -2,7 +2,7 @@ import { Text, View } from "react-native";
 
 import EditScreenInfo from "../../components/edit-screen-info";
 
-export default function TabTwoScreen() {
+export default function Profile() {
   return (
     <View className={styles.container}>
       <Text className={styles.title}>Tab Two</Text>

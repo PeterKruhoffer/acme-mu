@@ -1,19 +1,17 @@
-import { Text, View } from "react-native";
-
-import EditScreenInfo from "../../components/edit-screen-info";
+import Card from "../../components/Card";
+import { View, ScrollView } from "react-native";
+import UserInfo from "../../components/UserInfo";
 
 export default function TabOneScreen() {
   return (
-    <View className={styles.container}>
-      <Text className={styles.title}>Tab One</Text>
-      <View className={styles.separator} />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-    </View>
+    <ScrollView className="bg-white">
+      <View className="flex-1 pt-12">
+        <UserInfo />
+        <View className="py-8" />
+        <View className="p-2">
+          <Card item={{ title: "Title" }} />
+        </View>
+      </View>
+    </ScrollView>
   );
 }
-
-const styles = {
-  container: `items-center flex-1 justify-center`,
-  separator: `h-[1px] my-7 w-4/5 bg-gray-200`,
-  title: `text-xl font-bold`,
-};
