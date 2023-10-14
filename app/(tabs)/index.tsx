@@ -1,6 +1,6 @@
 import InfoCard from "../../components/InfoCard";
 import Card from "../../components/Card";
-import { View, ScrollView, Text } from "react-native";
+import { View, ScrollView, Text, useWindowDimensions } from "react-native";
 import UserInfo from "../../components/UserInfo";
 import { FlashList } from "@shopify/flash-list";
 
@@ -23,6 +23,10 @@ const DATA = [
 ]
 
 export default function TabOneScreen() {
+  const { width } = useWindowDimensions();
+  const cardWidth = 0.85 * width;
+  const seperatorWidth = 4
+  const snapToIntervalValue = cardWidth + seperatorWidth
   return (
     <ScrollView className="bg-gray-200">
       <UserInfo />
@@ -35,7 +39,7 @@ export default function TabOneScreen() {
         data={DATA}
         estimatedItemSize={300}
         decelerationRate="fast"
-        snapToInterval={340}
+        snapToInterval={snapToIntervalValue}
         snapToAlignment="start"
         disableAutoLayout={true}
         horizontal={true}
