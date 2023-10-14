@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 
 function UserInfo() {
   return (
-    <View className="flex gap-2 rounded-br-3xl p-4 bg-white h-80 relative">
+    <View className="flex gap-2 rounded-br-3xl px-4 pt-16 bg-white h-96 relative">
       <Text className="text-2xl py-8">Godmorgen Fornavn</Text>
 
       <View className="py-2 absolute bottom-12 left-4">
@@ -17,7 +17,7 @@ function UserInfo() {
         </View>
       </View>
 
-      <View className="absolute -bottom-10 right-4">
+      <View className="absolute -bottom-10 right-8">
         <View className="flex-row gap-x-8">
           <View className="flex-col">
             <FontAwesome name="phone" size={40} color="black" />
