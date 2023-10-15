@@ -1,19 +1,47 @@
+import { FontAwesome } from "@expo/vector-icons";
 import { Text, View } from "react-native";
-
-import EditScreenInfo from "../../components/edit-screen-info";
 
 export default function Profile() {
   return (
-    <View className={styles.container}>
-      <Text className={styles.title}>Tab Two</Text>
-      <View className={styles.separator} />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+    <View>
+      <View className="flex justify-center px-8 rounded-br-[90px] pt-16 bg-white h-80">
+        <View className="flex flex-row items-center gap-x-2">
+          <Text className="text-3xl py-2">Fornavn Efternavn</Text>
+          <FontAwesome name="arrow-right" size={15} color="black" />
+        </View>
+        <Text className="text-xl py-2">Profil og indstilinger</Text>
+      </View>
+      <View className="flex justify-center gap-8 px-4 py-8">
+        <View className="flex flex-row items-center gap-x-2">
+          <Text className="text-lg">Medlemskab</Text>
+          <FontAwesome name="arrow-right" size={15} color="black" />
+        </View>
+        <View className="flex flex-row items-center gap-x-2">
+          <Text className="text-lg">Arbejde</Text>
+          <FontAwesome name="arrow-right" size={15} color="black" />
+        </View>
+        <View className="flex flex-row items-center gap-x-2">
+          <Text className="text-lg">Uddannelse</Text>
+          <FontAwesome name="arrow-right" size={15} color="black" />
+        </View>
+        <View className="flex flex-row items-center gap-x-2">
+          <Text className="text-lg">Meld dig ud af Djoef</Text>
+          <FontAwesome name="arrow-right" size={15} color="black" />
+        </View>
+      </View>
+
+      <View className="border border-gray-500 w-full ml-6" />
+
+      <View className="flex justify-center gap-4 px-4 py-8">
+        <View className="flex flex-row items-center gap-x-2">
+          <Text className="text-sm">Om appen</Text>
+          <FontAwesome name="arrow-right" size={15} color="black" />
+        </View>
+        <View className="flex flex-row items-center gap-x-2">
+          <Text className="text-sm">Giv feedback</Text>
+          <FontAwesome name="arrow-right" size={15} color="black" />
+        </View>
+      </View>
     </View>
   );
 }
-
-const styles = {
-  container: `items-center flex-1 justify-center`,
-  separator: `h-[1px] my-7 w-4/5 bg-gray-200`,
-  title: `text-xl font-bold`,
-};
