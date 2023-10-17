@@ -1,5 +1,6 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { View, Text } from "react-native";
+import { Link } from "expo-router"
 
 function UserInfo() {
   return (
@@ -8,11 +9,13 @@ function UserInfo() {
 
       <View className="py-2 absolute bottom-12 left-4">
         <View className="flex flex-row gap-x-4">
-          <Text className="text-lg">Du har 1 ulæst besked</Text>
+          <Link href="/(tabs)/Timeline" className="text-lg">
+            Du har 1 ulæst besked
+          </Link>
           <FontAwesome name="arrow-right" size={20} color="black" />
         </View>
         <View className="flex flex-row gap-x-4">
-          <Text className="text-lg">Du har 1 kommende begivenhed</Text>
+          <Link href="/(tabs)/Timeline" className="text-lg">Du har 1 kommende begivenhed</Link>
           <FontAwesome name="arrow-right" size={20} color="black" />
         </View>
       </View>
