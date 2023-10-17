@@ -1,9 +1,9 @@
-import {View, Text} from 'react-native'
+import { View, Text } from 'react-native'
 
 function Timeline() {
   return (
-    <View>
-      <Text>Timeline</Text>
+    <View className='flex flex-1 justify-center items-center'>
+      <Text className='text-xl'>Tidslinje</Text>
     </View>
   )
 }
