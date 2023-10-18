@@ -1,17 +1,25 @@
 import { FontAwesome } from '@expo/vector-icons';
 import { View, Text } from 'react-native'
-import InfoCard from '../../components/InfoCard'
-import { FlashList } from "@shopify/flash-list";
+import MessageCard from '../../components/MessageCard';
 import Card from '../../components/Card';
+import { FlashList } from "@shopify/flash-list";
 
 const DATA = [
   {
     type: "Msg",
-    title: "First Item",
+    item: {
+      name: "First Item",
+      subject: "Subject",
+      description: "lorem ipsum dolor sit amet",
+    }
   },
   {
     type: "Msg",
-    title: "Second Item",
+    item: {
+      name: "Second Item",
+      subject: "Subject",
+      description: "lorem ipsum dolor sit amet",
+    }
   },
   {
     type: "Activity",
@@ -19,7 +27,11 @@ const DATA = [
   },
   {
     type: "Msg",
-    title: "Fourth Item",
+    item: {
+      name: "Fourth Item",
+      subject: "Subject",
+      description: "lorem ipsum dolor sit amet",
+    }
   },
   {
     type: "Activity",
@@ -27,7 +39,11 @@ const DATA = [
   },
   {
     type: "Msg",
-    title: "Sixth Item",
+    item: {
+      name: "Sixth Item",
+      subject: "Subject",
+      description: "lorem ipsum dolor sit amet",
+    }
   },
   {
     type: "Activity",
@@ -82,7 +98,7 @@ function Timeline() {
         contentContainerStyle={{ paddingHorizontal: 16 }}
         renderItem={({ item }) => {
           return item.type === "Msg" ? (
-            <InfoCard item={item} />
+            <MessageCard item={item.item} />
           ) : (
             <Card item={item} />
           )
