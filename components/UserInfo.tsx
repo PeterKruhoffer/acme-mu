@@ -15,7 +15,9 @@ function UserInfo() {
           <FontAwesome name="arrow-right" size={20} color="black" />
         </View>
         <View className="flex flex-row gap-x-4">
-          <Link href="/(tabs)/Timeline" className="text-lg">Du har 1 kommende begivenhed</Link>
+          <Link href="/(tabs)/Timeline" className="text-lg">
+            Du har 1 kommende begivenhed
+          </Link>
           <FontAwesome name="arrow-right" size={20} color="black" />
         </View>
       </View>
