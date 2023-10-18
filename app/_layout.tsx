@@ -10,6 +10,18 @@ export default function RootLayout() {
     <Stack>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
       <Stack.Screen name="modal" options={{ presentation: "modal" }} />
+      <Stack.Screen
+        name="modals/Membership"
+        options={{ presentation: "modal", headerTitle: "Medlemskab" }}
+      />
+      <Stack.Screen
+        name="modals/Work"
+        options={{ presentation: "modal", headerTitle: "Arbejde" }}
+      />
+      <Stack.Screen
+        name="modals/Education"
+        options={{ presentation: "modal", headerTitle: "Uddannelse" }}
+      />
     </Stack>
   );
 }

@@ -39,7 +39,7 @@ function Timeline() {
   return (
     <View className='flex flex-1 pt-12'>
       <View className='flex-row items-center gap-x-2 p-2'>
-        <FontAwesome name="plus" size={20} color="dark" />
+        <FontAwesome name="plus" size={20} color="black" />
         <Text className='text-lg'>Ny besked</Text>
       </View>
       <View className='w-screen bg-black h-auto py-1 flex flex-row items-center justify-center gap-x-2'>

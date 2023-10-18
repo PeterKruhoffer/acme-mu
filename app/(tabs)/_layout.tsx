@@ -1,5 +1,5 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { Link, Tabs } from "expo-router";
+import { Link, Tabs, Stack } from "expo-router";
 import { Pressable, StyleSheet } from "react-native";
 
 function TabBarIcon(props: {

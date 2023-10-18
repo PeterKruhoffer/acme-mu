@@ -1,5 +1,6 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { Text, View } from "react-native";
+import { Link } from "expo-router"
 
 export default function Profile() {
   return (
@@ -13,15 +14,21 @@ export default function Profile() {
       </View>
       <View className="flex justify-center gap-8 px-4 py-8">
         <View className="flex flex-row items-center gap-x-2">
-          <Text className="text-lg">Medlemskab</Text>
+          <Link href="/modals/Membership" className="text-lg">
+            Medlemskab
+          </Link>
           <FontAwesome name="arrow-right" size={15} color="black" />
         </View>
         <View className="flex flex-row items-center gap-x-2">
-          <Text className="text-lg">Arbejde</Text>
+          <Link href="/modals/Work" className="text-lg">
+            Arbejde
+          </Link>
           <FontAwesome name="arrow-right" size={15} color="black" />
         </View>
         <View className="flex flex-row items-center gap-x-2">
-          <Text className="text-lg">Uddannelse</Text>
+          <Link href="/modals/Education" className="text-lg">
+            Uddannelse
+          </Link>
           <FontAwesome name="arrow-right" size={15} color="black" />
         </View>
         <View className="flex flex-row items-center gap-x-2">
