@@ -9,6 +9,18 @@ export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen
+        name="cards/InfoDetails"
+        options={{ headerTitle: "Info detaljer" }}
+      />
+      <Stack.Screen
+        name="cards/ActivityDetails"
+        options={{ headerTitle: "Aktivitets detaljer" }}
+      />
+      <Stack.Screen
+        name="cards/BenefitDetails"
+        options={{ headerTitle: "Fordele detaljer" }}
+      />
       <Stack.Screen name="modal" options={{ presentation: "modal" }} />
       <Stack.Screen
         name="modals/Membership"
