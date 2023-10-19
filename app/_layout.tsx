@@ -38,6 +38,10 @@ export default function RootLayout() {
         name="modals/Education"
         options={{ presentation: "modal", headerTitle: "Uddannelse" }}
       />
+      <Stack.Screen
+        name="modals/NewMessage"
+        options={{ presentation: "modal", headerTitle: "Ny Besked" }}
+      />
     </Stack>
   );
 }

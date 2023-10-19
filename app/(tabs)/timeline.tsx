@@ -1,8 +1,10 @@
 import { FontAwesome } from '@expo/vector-icons';
-import { View, Text } from 'react-native'
+import { Link } from 'expo-router';
+import { View, Text, Pressable } from 'react-native'
 import MessageCard from '../../components/MessageCard';
 import Card from '../../components/Card';
 import { FlashList } from "@shopify/flash-list";
+import { atom, useAtom } from "jotai"
 
 const DATA = [
   {
@@ -51,19 +53,24 @@ const DATA = [
   }
 ]
 
+export const timeLineAtom = atom(DATA.reverse())
+
 function Timeline() {
+  const [timeLine, setTimeLine] = useAtom(timeLineAtom)
   return (
     <View className='flex flex-1 pt-12'>
-      <View className='flex-row items-center gap-x-2 p-2'>
-        <FontAwesome name="plus" size={20} color="black" />
-        <Text className='text-lg'>Ny besked</Text>
-      </View>
+      <Link href="/modals/NewMessage" asChild>
+        <Pressable className='flex-row items-center gap-x-2 p-2'>
+          <FontAwesome name="plus" size={20} color="black" />
+          <Text className='text-lg'>Ny besked</Text>
+        </Pressable>
+      </Link>
       <View className='w-screen bg-black h-auto py-1 flex flex-row items-center justify-center gap-x-2'>
         <FontAwesome name="arrow-up" size={20} color="white" />
         <Text className='text-lg text-white'>Kommende begivenheder(1)</Text>
       </View>
       <FlashList
-        data={DATA}
+        data={timeLine}
         estimatedItemSize={300}
         decelerationRate="fast"
         bounces={false}
