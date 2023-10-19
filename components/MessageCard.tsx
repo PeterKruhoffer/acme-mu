@@ -13,20 +13,20 @@ type MessageCardProps = {
 function MessageCard(props: MessageCardProps) {
   return (
     <Link href="/cards/MessageDetails" asChild>
-      <Pressable className="w-full h-48 bg-blue-700 relative p-4">
+      <Pressable className="w-full h-48 bg-white relative p-4">
         <View className='flex-row gap-x-2'>
           <View className='bg-black rounded-full w-8 h-8 flex justify-center items-center'>
             <Text className='text-white'>HF</Text>
           </View>
-          <Text className="text-lg text-white">{props.item.name}</Text>
+          <Text className="text-lg">{props.item.name}</Text>
         </View>
         <View className='p-6'>
-          <Text className="text-sm text-white">{props.item.subject}</Text>
-          <Text className="text-sm text-white">{props.item.description}</Text>
+          <Text className="text-sm">{props.item.subject}</Text>
+          <Text className="text-sm">{props.item.description}</Text>
         </View>
         <View className="absolute bottom-4 left-4 flex flex-row gap-2">
-          <FontAwesome name="file-text" size={20} color="white" />
-          <Text className="text-sm text-white">dokumenter</Text>
+          <FontAwesome name="file-text" size={20} color="black" />
+          <Text className="text-sm">dokumenter</Text>
         </View>
       </Pressable>
     </Link>
