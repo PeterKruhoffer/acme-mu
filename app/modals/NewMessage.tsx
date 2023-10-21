@@ -12,7 +12,17 @@ function NewMessage() {
   const [message, setMessage] = useState('')
 
   function handleSendMsg() {
-    setTimeLine([{ type: "Msg", item: { name, subject, description: message } }, ...timeLine])
+    setTimeLine([{
+      type: "Msg",
+      item: {
+        id: (timeLine.length + 1).toString(),
+        name,
+        subject,
+        description: message
+      }
+    },
+    ...timeLine]
+    )
     router.back()
   }
   return (

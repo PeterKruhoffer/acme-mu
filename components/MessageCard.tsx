@@ -4,15 +4,22 @@ import { View, Text, Pressable } from 'react-native';
 
 type MessageCardProps = {
   item: {
+    id: string
     name: string
     subject: string
     description: string
   }
 }
 
+
 function MessageCard(props: MessageCardProps) {
   return (
-    <Link href="/cards/MessageDetails" asChild>
+    <Link href={{
+      pathname: "/cards/messages/[messageDetails]",
+      params: { messageDetails: props.item.id }
+    }}
+      asChild
+    >
       <Pressable className="w-full h-48 bg-white relative p-4">
         <View className='flex-row gap-x-2'>
           <View className='bg-black rounded-full w-8 h-8 flex justify-center items-center'>

@@ -14,11 +14,11 @@ export default function RootLayout() {
         options={{ headerTitle: "Info detaljer" }}
       />
       <Stack.Screen
-        name="cards/ActivityDetails"
+        name="cards/activities/[activityDetails]"
         options={{ headerTitle: "Aktivitets detaljer" }}
       />
       <Stack.Screen
-        name="cards/MessageDetails"
+        name="cards/messages/[messageDetails]"
         options={{ headerTitle: "Besked detaljer" }}
       />
       <Stack.Screen

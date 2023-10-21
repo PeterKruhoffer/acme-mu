@@ -1,24 +1,54 @@
-import InfoCard from "../../components/InfoCard";
-import Card from "../../components/Card";
-import { View, ScrollView, Text, useWindowDimensions } from "react-native";
-import UserInfo from "../../components/UserInfo";
 import { FlashList } from "@shopify/flash-list";
+import { View, ScrollView, Text, useWindowDimensions } from "react-native";
+import Card from "../../components/Card";
+import InfoCard from "../../components/InfoCard";
+import UserInfo from "../../components/UserInfo";
 
 const DATA = [
   {
-    title: "First Item",
+    type: "Activity",
+    item: {
+      id: "1",
+      name: "Excel mester",
+      location: "Lokation",
+      description: "Bliv den ultimative Excel mester på 2 dage",
+    }
   },
   {
-    title: "Second Item",
+    type: "Activity",
+    item: {
+      id: "2",
+      name: "Powerpoint professionel",
+      location: "Lokation",
+      description: "Bliv den ultimative Powerpoint professionel på din arbejdsplads",
+    }
   },
   {
-    title: "Third Item",
+    type: "Activity",
+    item: {
+      id: "3",
+      name: "Agile Evangelist",
+      location: "Lokation",
+      description: "Bliv den ultimative Agile Evangelist for dine kollager",
+    }
   },
   {
-    title: "Fourth Item",
+    type: "Activity",
+    item: {
+      id: "4",
+      name: "Microsoft Teams",
+      location: "Lokation",
+      description: "Bliv den ultimative Microsoft Teams chatbot på kun 1 dag",
+    }
   },
   {
-    title: "Fifth Item",
+    type: "Activity",
+    item: {
+      id: "5",
+      name: "Presentation Master",
+      location: "Lokation",
+      description: "Presenter som aldrig før med vores 2 dages kursus",
+    }
   },
 ]
 
@@ -48,9 +78,8 @@ export default function TabOneScreen() {
         disableAutoLayout={true}
         horizontal={true}
         ItemSeparatorComponent={() => <View className="p-1" />}
-        ListFooterComponent={() => <View className="p-4 w-2" />}
         contentContainerStyle={{ paddingHorizontal: 16 }}
-        renderItem={({ item }) => <Card item={item} />}
+        renderItem={({ item }) => <Card item={item.item} />}
       />
       <View className="px-4 py-8 flex-2">
         <Text className="text-2xl py-4">Anbefalede aktiviteter</Text>

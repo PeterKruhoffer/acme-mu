@@ -3,7 +3,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { View, Text, Pressable } from 'react-native'
 import { Link } from 'expo-router'
 
-export default function Card(props: { item: { id: string, name: string, location: string, description: string } }) {
+export default function ActivityCard(props: { item: { id: string, name: string, location: string, description: string } }) {
   return (
     <Link href={{
       pathname: "/cards/activities/[activityDetails]",
@@ -11,7 +11,7 @@ export default function Card(props: { item: { id: string, name: string, location
     }}
       asChild
     >
-      <Pressable className="w-[85vw]">
+      <Pressable className="w-full">
         <LinearGradient
           colors={["#0284c7", "#2563eb", "#1e40af"]}
           end={{ x: 0.7, y: 0.9 }}

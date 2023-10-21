@@ -4,25 +4,55 @@ import Card from "../../components/Card";
 
 const DATA = [
   {
-    title: "First Item",
+    type: "Activity",
+    item: {
+      id: "1",
+      name: "First Item",
+      location: "Lokation",
+      description: "lorem ipsum dolor sit amet",
+    }
   },
   {
-    title: "Second Item",
+    type: "Activity",
+    item: {
+      id: "2",
+      name: "Second Item",
+      location: "Lokation",
+      description: "lorem ipsum dolor sit amet",
+    }
   },
   {
-    title: "Third Item",
+    type: "Activity",
+    item: {
+      id: "3",
+      name: "Third Item",
+      location: "Lokation",
+      description: "lorem ipsum dolor sit amet",
+    }
   },
   {
-    title: "Fourth Item",
+    type: "Activity",
+    item: {
+      id: "4",
+      name: "Fourth Item",
+      location: "Lokation",
+      description: "lorem ipsum dolor sit amet",
+    }
   },
   {
-    title: "Fifth Item",
+    type: "Activity",
+    item: {
+      id: "4",
+      name: "Fourth Item",
+      location: "Lokation",
+      description: "lorem ipsum dolor sit amet",
+    }
   },
 ]
 
 function Benefits() {
   const { width } = useWindowDimensions();
-  const cardWidth = 0.85 * width;
+  const cardWidth = 0.93 * width;
   const seperatorWidth = 4
   const snapToIntervalValue = cardWidth + seperatorWidth
   return (
@@ -43,7 +73,7 @@ function Benefits() {
           ListFooterComponent={() => <View className="p-4 w-2" />}
           horizontal={true}
           nestedScrollEnabled={true}
-          renderItem={({ item }) => <Card item={item} />}
+          renderItem={({ item }) => <Card item={item.item} />}
         />
       </View>
       <View className="py-4 px-2">
@@ -59,7 +89,7 @@ function Benefits() {
           ListFooterComponent={() => <View className="p-4 w-2" />}
           horizontal={true}
           nestedScrollEnabled={true}
-          renderItem={({ item }) => <Card item={item} />}
+          renderItem={({ item }) => <Card item={item.item} />}
         />
       </View>
       <View className="py-4 px-2">
@@ -75,7 +105,7 @@ function Benefits() {
           ListFooterComponent={() => <View className="p-4 w-2" />}
           horizontal={true}
           nestedScrollEnabled={true}
-          renderItem={({ item }) => <Card item={item} />}
+          renderItem={({ item }) => <Card item={item.item} />}
         />
       </View>
     </ScrollView>

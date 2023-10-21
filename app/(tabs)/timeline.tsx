@@ -2,7 +2,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { Link } from 'expo-router';
 import { View, Text, Pressable } from 'react-native'
 import MessageCard from '../../components/MessageCard';
-import Card from '../../components/Card';
+import ActivityCard from '../../components/ActivityCard';
 import { FlashList } from "@shopify/flash-list";
 import { atom, useAtom } from "jotai"
 
@@ -10,46 +10,65 @@ const DATA = [
   {
     type: "Msg",
     item: {
+      id: "1",
       name: "First Item",
-      subject: "Subject",
+      subject: "Emne",
       description: "lorem ipsum dolor sit amet",
     }
   },
   {
     type: "Msg",
     item: {
+      id: "2",
       name: "Second Item",
-      subject: "Subject",
+      subject: "Emne",
       description: "lorem ipsum dolor sit amet",
     }
   },
   {
     type: "Activity",
-    title: "Third Item",
+    item: {
+      id: "3",
+      name: "Excel mester",
+      location: "Lokation",
+      description: "Bliv den ultimative Excel mester på 2 dage",
+    }
   },
   {
     type: "Msg",
     item: {
+      id: "4",
       name: "Fourth Item",
-      subject: "Subject",
+      subject: "Emne",
       description: "lorem ipsum dolor sit amet",
     }
   },
   {
     type: "Activity",
-    title: "Fifth Item",
+    item: {
+      id: "5",
+      name: "Powerpoint professionel",
+      location: "Lokation",
+      description: "Bliv den ultimative Powerpoint professionel på din arbejdsplads",
+    }
   },
   {
     type: "Msg",
     item: {
+      id: "4",
       name: "Sixth Item",
-      subject: "Subject",
+      subject: "Emne",
       description: "lorem ipsum dolor sit amet",
     }
   },
   {
     type: "Activity",
-    title: "Seventh Item",
+    item: {
+      id: "7",
+      name: "Agile Evangelist",
+      location: "Lokation",
+      description: "Bliv den ultimative Agile Evangelist for dine kollager",
+    }
   }
 ]
 
@@ -98,7 +117,7 @@ function Timeline() {
           </View>
         )}
         ListFooterComponent={() => (
-          <View className="p-4 w-full flex items-center justify-center">
+          <View className="p-4 w-full flex items-center justify-center border">
             <FontAwesome name="rocket" size={140} color="black" />
           </View>
         )}
@@ -107,7 +126,7 @@ function Timeline() {
           return item.type === "Msg" ? (
             <MessageCard item={item.item} />
           ) : (
-            <Card item={item} />
+            <ActivityCard item={item.item} />
           )
         }}
       />
