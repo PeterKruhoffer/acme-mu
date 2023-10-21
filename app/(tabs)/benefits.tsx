@@ -52,7 +52,7 @@ const DATA = [
 
 function Benefits() {
   const { width } = useWindowDimensions();
-  const cardWidth = 0.93 * width;
+  const cardWidth = 0.85 * width;
   const seperatorWidth = 4
   const snapToIntervalValue = cardWidth + seperatorWidth
   return (
