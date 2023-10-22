@@ -117,7 +117,7 @@ function Timeline() {
           </View>
         )}
         ListFooterComponent={() => (
-          <View className="p-4 w-full flex items-center justify-center border">
+          <View className="p-4 w-full flex items-center justify-center">
             <FontAwesome name="rocket" size={140} color="black" />
           </View>
         )}
