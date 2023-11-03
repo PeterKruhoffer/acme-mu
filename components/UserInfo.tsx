@@ -22,18 +22,12 @@ function UserInfo() {
         </View>
       </View>
 
-      <View className="absolute -bottom-10 right-8">
-        <View className="flex-row gap-x-8">
-          <View className="flex-col">
-            <FontAwesome name="phone" size={40} color="black" />
-            <Text className="text-lg text-center">Ring</Text>
-          </View>
-          <View>
-            <FontAwesome name="envelope" size={40} color="black" />
-            <Text className="text-lg text-center">Skriv</Text>
-          </View>
+      <Link href="/modals/NewMessage" className="absolute -bottom-10 right-8">
+        <View className="flex-col">
+          <FontAwesome name="envelope" size={40} color="black" />
+          <Text className="text-lg text-center">Skriv</Text>
         </View>
-      </View>
+      </Link>
     </View>
   );
 }
