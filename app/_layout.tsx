@@ -18,6 +18,10 @@ export default function RootLayout() {
         options={{ headerTitle: "Aktivitets detaljer" }}
       />
       <Stack.Screen
+        name="cards/message"
+        options={{ headerTitle: "Beskeder" }}
+      />
+      <Stack.Screen
         name="cards/messages/[messageDetails]"
         options={{ headerTitle: "Besked detaljer" }}
       />

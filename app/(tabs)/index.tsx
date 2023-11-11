@@ -1,5 +1,6 @@
 import { FlashList } from "@shopify/flash-list";
 import { View, ScrollView, Text, useWindowDimensions } from "react-native";
+
 import Card from "../../components/Card";
 import InfoCard from "../../components/InfoCard";
 import UserInfo from "../../components/UserInfo";

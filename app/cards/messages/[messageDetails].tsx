@@ -3,12 +3,12 @@ import { useLocalSearchParams } from "expo-router";
 import { useAtom } from "jotai";
 import { Text } from "react-native";
 
-import { timeLineAtom } from "../../(tabs)/activities";
+import { messagesAtom } from "../message";
 
 function MessageDetails() {
   const { messageDetails } = useLocalSearchParams();
-  const [timeLine] = useAtom(timeLineAtom);
-  const message = timeLine.find((item) => item?.item?.id === messageDetails);
+  const [msg] = useAtom(messagesAtom);
+  const message = msg.find((item) => item?.item?.id === messageDetails);
   return (
     <LinearGradient
       colors={["#fb923c", "#fbbf24"]}

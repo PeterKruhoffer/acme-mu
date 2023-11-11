@@ -9,13 +9,13 @@ function UserInfo() {
 
       <View className="py-2 absolute bottom-12 left-4">
         <View className="flex flex-row gap-x-4">
-          <Link href="/(tabs)/Timeline" className="text-lg">
+          <Link href="/cards/message" className="text-lg">
             Du har 1 ulæst besked
           </Link>
           <FontAwesome name="arrow-right" size={20} color="black" />
         </View>
         <View className="flex flex-row gap-x-4">
-          <Link href="/(tabs)/Timeline" className="text-lg">
+          <Link href="/(tabs)/activities" className="text-lg">
             Du har 1 kommende begivenhed
           </Link>
           <FontAwesome name="arrow-right" size={20} color="black" />

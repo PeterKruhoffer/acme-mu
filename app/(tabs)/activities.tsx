@@ -1,17 +1,15 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { FlashList } from "@shopify/flash-list";
-import { Link } from "expo-router";
-import { atom, useAtom } from "jotai";
-import { View, Text, Pressable } from "react-native";
+import { atom } from "jotai";
+import { View, Text } from "react-native";
 
 import ActivityCard from "../../components/ActivityCard";
-//import MessageCard from "../../components/MessageCard";
 
 const DATA = [
   {
     type: "Activity",
     item: {
-      id: "3",
+      id: "1",
       name: "Excel mester",
       location: "Lokation",
       description: "Bliv den ultimative Excel mester på 2 dage",
@@ -20,7 +18,7 @@ const DATA = [
   {
     type: "Activity",
     item: {
-      id: "5",
+      id: "2",
       name: "Powerpoint professionel",
       location: "Lokation",
       description:
@@ -30,7 +28,25 @@ const DATA = [
   {
     type: "Activity",
     item: {
-      id: "7",
+      id: "3",
+      name: "Agile Evangelist",
+      location: "Lokation",
+      description: "Bliv den ultimative Agile Evangelist for dine kollager",
+    },
+  },
+  {
+    type: "Activity",
+    item: {
+      id: "4",
+      name: "Agile Evangelist",
+      location: "Lokation",
+      description: "Bliv den ultimative Agile Evangelist for dine kollager",
+    },
+  },
+  {
+    type: "Activity",
+    item: {
+      id: "5",
       name: "Agile Evangelist",
       location: "Lokation",
       description: "Bliv den ultimative Agile Evangelist for dine kollager",
@@ -38,24 +54,18 @@ const DATA = [
   },
 ];
 
-export const timeLineAtom = atom(DATA.reverse());
+export const activitiesAtom = atom(DATA.reverse());
 
 function ActivityScreen() {
-  const [timeLine, setTimeLine] = useAtom(timeLineAtom);
+  const activities = activitiesAtom.init
   return (
-    <View className="flex flex-1 pt-12">
-      <Link href="/modals/NewMessage" asChild>
-        <Pressable className="flex-row items-center gap-x-2 p-2">
-          <FontAwesome name="plus" size={20} color="black" />
-          <Text className="text-lg">Ny besked</Text>
-        </Pressable>
-      </Link>
+    <View className="flex flex-1 pt-14">
       <View className="w-screen bg-black h-auto py-1 flex flex-row items-center justify-center gap-x-2">
         <FontAwesome name="arrow-up" size={20} color="white" />
         <Text className="text-lg text-white">Kommende begivenheder(1)</Text>
       </View>
       <FlashList
-        data={timeLine}
+        data={activities}
         estimatedItemSize={300}
         decelerationRate="fast"
         bounces={false}
@@ -83,9 +93,7 @@ function ActivityScreen() {
           </View>
         )}
         ListFooterComponent={() => (
-          <View className="p-4 w-full flex items-center justify-center">
-            <FontAwesome name="rocket" size={140} color="black" />
-          </View>
+          <View className="p-4 w-full flex items-center justify-center" />
         )}
         contentContainerStyle={{ paddingHorizontal: 16 }}
         renderItem={({ item }) => {
