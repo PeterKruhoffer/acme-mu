@@ -20,7 +20,7 @@ function MessageCard(props: MessageCardProps) {
       }}
       asChild
     >
-      <Pressable className="w-full h-48 bg-white relative p-4">
+      <Pressable className="w-full h-52 bg-white relative p-4">
         <View className="flex-row gap-x-2">
           <View className="bg-black rounded-full w-8 h-8 flex justify-center items-center">
             <Text className="text-white">HF</Text>
@@ -28,8 +28,10 @@ function MessageCard(props: MessageCardProps) {
           <Text className="text-lg">{props.item.name}</Text>
         </View>
         <View className="p-6">
-          <Text className="text-sm">{props.item.subject}</Text>
-          <Text className="text-sm">{props.item.description}</Text>
+          <Text className="text-sm py-1">{props.item.subject}</Text>
+          <Text className="text-sm py-1" numberOfLines={2}>
+            {props.item.description}
+          </Text>
         </View>
         <View className="absolute bottom-4 left-4 flex flex-row gap-2">
           <FontAwesome name="file-text" size={20} color="black" />
