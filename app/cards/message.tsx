@@ -19,7 +19,7 @@ const DATA = [
     item: {
       id: "2",
       name: "Navn",
-      subject: "Ferie",
+      subject: "Løn",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
   },
@@ -28,8 +28,9 @@ const DATA = [
     item: {
       id: "3",
       name: "Navn",
-      subject: "Ferie",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      subject: "CV sparring",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
     },
   },
 ];
