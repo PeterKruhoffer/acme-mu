@@ -1,5 +1,5 @@
 import { FlashList } from "@shopify/flash-list";
-import { atom } from "jotai";
+import { atom, useAtom } from "jotai";
 import { View } from "react-native";
 
 import MessageCard from "../../components/MessageCard";
@@ -38,7 +38,7 @@ const DATA = [
 export const messagesAtom = atom(DATA.reverse());
 
 function Message() {
-  const messages = messagesAtom.init;
+  const [messages] = useAtom(messagesAtom);
   return (
     <View className="p-4 flex justify-center items-center flex-1">
       <View className="h-full w-full">

@@ -1,6 +1,6 @@
-import { useLocalSearchParams } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import { useAtom } from "jotai";
-import { Button, Text, View, ScrollView } from "react-native";
+import { Text, View, ScrollView } from "react-native";
 
 import { messagesAtom } from "../message";
 
@@ -18,7 +18,9 @@ function MessageDetails() {
       <ScrollView className="p-2">
         <Text className="text-xl py-4">{message?.item?.description}</Text>
       </ScrollView>
-      <Button title="Send svar" />
+      <Link href="/modals/NewMessage" className="self-center">
+        <Text className="text-lg text-blue-500">Send svar</Text>
+      </Link>
     </View>
   );
 }

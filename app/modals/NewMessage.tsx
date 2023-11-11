@@ -3,26 +3,26 @@ import { useAtom } from "jotai";
 import { useState } from "react";
 import { View, Text, Pressable, TextInput } from "react-native";
 
-import { timeLineAtom } from "../(tabs)/activities";
+import { messagesAtom } from "../cards/message";
 
 function NewMessage() {
-  const [timeLine, setTimeLine] = useAtom(timeLineAtom);
+  const [msg, setMsg] = useAtom(messagesAtom);
   const [subject, setSubject] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
   function handleSendMsg() {
-    setTimeLine([
+    setMsg([
       {
         type: "Msg",
         item: {
-          id: (timeLine.length + 1).toString(),
+          id: (msg.length + 1).toString(),
           name,
           subject,
           description: message,
         },
       },
-      ...timeLine,
+      ...msg,
     ]);
     router.back();
   }
@@ -30,19 +30,19 @@ function NewMessage() {
     <View className="flex-1 items-center py-8">
       <View className="w-full p-4 gap-4">
         <TextInput
-          className="border p-2"
+          className="border p-2 text-lg"
           placeholder="Emne"
           value={subject}
           onChangeText={setSubject}
         />
         <TextInput
-          className="border p-2"
+          className="border p-2 text-lg"
           placeholder="Navn"
           value={name}
           onChangeText={setName}
         />
         <TextInput
-          className="border p-2 h-32"
+          className="border p-2 h-32 text-lg"
           placeholder="Besked"
           multiline
           editable
@@ -52,8 +52,8 @@ function NewMessage() {
           onChangeText={setMessage}
         />
       </View>
-      <Pressable onPress={handleSendMsg} className="border bg-black p-2">
-        <Text className="text-white">Send</Text>
+      <Pressable onPress={handleSendMsg} className="border bg-black px-2 py-1">
+        <Text className="text-white text-lg">Send</Text>
       </Pressable>
     </View>
   );

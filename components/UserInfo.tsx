@@ -1,10 +1,10 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { Link } from "expo-router";
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
 
 function UserInfo() {
   return (
-    <View className="flex gap-2  rounded-br-[90px] px-4 pt-16 bg-white h-96 relative">
+    <View className="flex gap-2 rounded-br-[90px] px-4 pt-16 bg-white h-96 relative">
       <Text className="text-2xl py-8">Godmorgen Fornavn</Text>
 
       <View className="py-2 absolute bottom-12 left-4">
@@ -22,11 +22,15 @@ function UserInfo() {
         </View>
       </View>
 
-      <Link href="/modals/NewMessage" className="absolute -bottom-10 right-8">
-        <View className="flex-col">
+      <Link
+        href="/modals/NewMessage"
+        className="absolute -bottom-10 right-8"
+        asChild
+      >
+        <Pressable className="flex-col">
           <FontAwesome name="envelope" size={40} color="black" />
           <Text className="text-lg text-center">Skriv</Text>
-        </View>
+        </Pressable>
       </Link>
     </View>
   );

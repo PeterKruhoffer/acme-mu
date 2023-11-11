@@ -1,13 +1,12 @@
 import { FontAwesome } from "@expo/vector-icons";
 import { FlashList } from "@shopify/flash-list";
-import { atom } from "jotai";
+import { atom, useAtom } from "jotai";
 import { View, Text } from "react-native";
 
 import ActivityCard from "../../components/ActivityCard";
 
 const DATA = [
   {
-    type: "Activity",
     item: {
       id: "1",
       name: "Excel mester",
@@ -16,7 +15,6 @@ const DATA = [
     },
   },
   {
-    type: "Activity",
     item: {
       id: "2",
       name: "Powerpoint professionel",
@@ -26,7 +24,6 @@ const DATA = [
     },
   },
   {
-    type: "Activity",
     item: {
       id: "3",
       name: "Agile Evangelist",
@@ -34,8 +31,8 @@ const DATA = [
       description: "Bliv den ultimative Agile Evangelist for dine kollager",
     },
   },
+
   {
-    type: "Activity",
     item: {
       id: "4",
       name: "Agile Evangelist",
@@ -44,7 +41,6 @@ const DATA = [
     },
   },
   {
-    type: "Activity",
     item: {
       id: "5",
       name: "Agile Evangelist",
@@ -57,7 +53,7 @@ const DATA = [
 export const activitiesAtom = atom(DATA.reverse());
 
 function ActivityScreen() {
-  const activities = activitiesAtom.init
+  const [activities] = useAtom(activitiesAtom)
   return (
     <View className="flex flex-1 pt-14">
       <View className="w-screen bg-black h-auto py-1 flex flex-row items-center justify-center gap-x-2">
