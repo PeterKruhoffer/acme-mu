@@ -1,6 +1,6 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import { Link } from 'expo-router'
-import { View, Text, Pressable } from 'react-native'
+import { Link } from "expo-router";
+import { View, Text, Pressable } from "react-native";
 
 export default function InfoCard(props: { item: { title: string } }) {
   return (
@@ -13,5 +13,5 @@ export default function InfoCard(props: { item: { title: string } }) {
         </View>
       </Pressable>
     </Link>
-  )
+  );
 }

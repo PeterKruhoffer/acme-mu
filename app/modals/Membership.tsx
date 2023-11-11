@@ -1,22 +1,24 @@
 import { FontAwesome } from "@expo/vector-icons";
-import { View, Text } from 'react-native';
+import { View, Text } from "react-native";
 
 function Membership() {
   return (
-    <View className='bg-white flex flex-1'>
-
-      <View className='bg-black w-full h-28 p-8 flex flex-row'>
+    <View className="bg-white flex flex-1">
+      <View className="bg-black w-full h-28 p-8 flex flex-row">
         <FontAwesome name="id-card" size={40} color="white" />
         <View className="flex flex-col px-8">
-          <Text className='text-white'>Medlemsnummer</Text>
-          <Text className='text-white text-3xl'>83838383</Text>
+          <Text className="text-white">Medlemsnummer</Text>
+          <Text className="text-white text-3xl">83838383</Text>
         </View>
       </View>
 
       <View className="p-8">
         <Text className="text-2xl">Kontingent</Text>
         <Text className="py-4">
-          Lorem ipsum dolor atset Lorem ipsum dolor atsetLorem ipsum dolor atsetLorem ipsum dolor atsetLorem ipsum dolor atsetLorem ipsum dolor atsetLorem ipsum dolor atsetLorem ipsum dolor atsetLorem ipsum dolor atset
+          Lorem ipsum dolor atset Lorem ipsum dolor atsetLorem ipsum dolor
+          atsetLorem ipsum dolor atsetLorem ipsum dolor atsetLorem ipsum dolor
+          atsetLorem ipsum dolor atsetLorem ipsum dolor atsetLorem ipsum dolor
+          atset
         </Text>
 
         <View className="flex pt-4 flex-row border-b-2 border-gray-400 items-center justify-between">

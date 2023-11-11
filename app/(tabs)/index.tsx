@@ -12,7 +12,7 @@ const DATA = [
       name: "Excel mester",
       location: "Lokation",
       description: "Bliv den ultimative Excel mester på 2 dage",
-    }
+    },
   },
   {
     type: "Activity",
@@ -20,8 +20,9 @@ const DATA = [
       id: "2",
       name: "Powerpoint professionel",
       location: "Lokation",
-      description: "Bliv den ultimative Powerpoint professionel på din arbejdsplads",
-    }
+      description:
+        "Bliv den ultimative Powerpoint professionel på din arbejdsplads",
+    },
   },
   {
     type: "Activity",
@@ -30,7 +31,7 @@ const DATA = [
       name: "Agile Evangelist",
       location: "Lokation",
       description: "Bliv den ultimative Agile Evangelist for dine kollager",
-    }
+    },
   },
   {
     type: "Activity",
@@ -39,7 +40,7 @@ const DATA = [
       name: "Microsoft Teams",
       location: "Lokation",
       description: "Bliv den ultimative Microsoft Teams chatbot på kun 1 dag",
-    }
+    },
   },
   {
     type: "Activity",
@@ -48,15 +49,15 @@ const DATA = [
       name: "Presentation Master",
       location: "Lokation",
       description: "Presenter som aldrig før med vores 2 dages kursus",
-    }
+    },
   },
-]
+];
 
 export default function TabOneScreen() {
   const { width } = useWindowDimensions();
   const cardWidth = 0.85 * width;
-  const seperatorWidth = 4
-  const snapToIntervalValue = cardWidth + seperatorWidth
+  const seperatorWidth = 4;
+  const snapToIntervalValue = cardWidth + seperatorWidth;
   return (
     <ScrollView className="bg-gray-200">
       <UserInfo />
@@ -64,7 +65,8 @@ export default function TabOneScreen() {
       <View className="px-4">
         <InfoCard
           item={{
-            title: "Hvis du ændrer til/fra Danmark, så kontakt os på 33 95 97 00"
+            title:
+              "Hvis du ændrer til/fra Danmark, så kontakt os på 33 95 97 00",
           }}
         />
       </View>
@@ -75,8 +77,8 @@ export default function TabOneScreen() {
         decelerationRate="fast"
         snapToInterval={snapToIntervalValue}
         snapToAlignment="start"
-        disableAutoLayout={true}
-        horizontal={true}
+        disableAutoLayout
+        horizontal
         ItemSeparatorComponent={() => <View className="p-1" />}
         contentContainerStyle={{ paddingHorizontal: 16 }}
         renderItem={({ item }) => <Card item={item.item} />}

@@ -1,6 +1,6 @@
 import { FontAwesome } from "@expo/vector-icons";
+import { Link } from "expo-router";
 import { Text, View } from "react-native";
-import { Link } from "expo-router"
 
 export default function Profile() {
   return (

@@ -2,12 +2,13 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useLocalSearchParams } from "expo-router";
 import { useAtom } from "jotai";
 import { Text } from "react-native";
-import { timeLineAtom } from "../../(tabs)/Timeline";
+import { timeLineAtom } from "../../(tabs)/activities";
 
 function ActivityDetails() {
   const { activityDetails } = useLocalSearchParams();
   const [timeLine] = useAtom(timeLineAtom);
   const activity = timeLine.find((item) => item?.item?.id === activityDetails);
+
   return (
     <LinearGradient
       colors={["#0284c7", "#2563eb"]}

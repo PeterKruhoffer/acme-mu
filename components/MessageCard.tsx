@@ -1,33 +1,33 @@
-import { FontAwesome } from '@expo/vector-icons';
-import { Link } from 'expo-router';
-import { View, Text, Pressable } from 'react-native';
+import { FontAwesome } from "@expo/vector-icons";
+import { Link } from "expo-router";
+import { View, Text, Pressable } from "react-native";
 
 type MessageCardProps = {
   item: {
-    id: string
-    name: string
-    subject: string
-    description: string
-  }
-}
-
+    id: string;
+    name: string;
+    subject: string;
+    description: string;
+  };
+};
 
 function MessageCard(props: MessageCardProps) {
   return (
-    <Link href={{
-      pathname: "/cards/messages/[messageDetails]",
-      params: { messageDetails: props.item.id }
-    }}
+    <Link
+      href={{
+        pathname: "/cards/messages/[messageDetails]",
+        params: { messageDetails: props.item.id },
+      }}
       asChild
     >
       <Pressable className="w-full h-48 bg-white relative p-4">
-        <View className='flex-row gap-x-2'>
-          <View className='bg-black rounded-full w-8 h-8 flex justify-center items-center'>
-            <Text className='text-white'>HF</Text>
+        <View className="flex-row gap-x-2">
+          <View className="bg-black rounded-full w-8 h-8 flex justify-center items-center">
+            <Text className="text-white">HF</Text>
           </View>
           <Text className="text-lg">{props.item.name}</Text>
         </View>
-        <View className='p-6'>
+        <View className="p-6">
           <Text className="text-sm">{props.item.subject}</Text>
           <Text className="text-sm">{props.item.description}</Text>
         </View>
@@ -37,7 +37,7 @@ function MessageCard(props: MessageCardProps) {
         </View>
       </Pressable>
     </Link>
-  )
+  );
 }
 
 export default MessageCard;

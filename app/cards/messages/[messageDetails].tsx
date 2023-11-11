@@ -2,7 +2,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useLocalSearchParams } from "expo-router";
 import { useAtom } from "jotai";
 import { Text } from "react-native";
-import { timeLineAtom } from "../../(tabs)/Timeline";
+
+import { timeLineAtom } from "../../(tabs)/activities";
 
 function MessageDetails() {
   const { messageDetails } = useLocalSearchParams();

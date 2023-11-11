@@ -1,14 +1,18 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { LinearGradient } from "expo-linear-gradient";
-import { View, Text, Pressable } from 'react-native'
-import { Link } from 'expo-router'
+import { Link } from "expo-router";
+import { View, Text, Pressable } from "react-native";
 
-export default function ActivityCard(props: { item: { id: string, name: string, location: string, description: string } }) {
+
+export default function ActivityCard(props: {
+  item: { id: string; name: string; location: string; description: string };
+}) {
   return (
-    <Link href={{
-      pathname: "/cards/activities/[activityDetails]",
-      params: { activityDetails: props.item.id }
-    }}
+    <Link
+      href={{
+        pathname: "/cards/activities/[activityDetails]",
+        params: { activityDetails: props.item.id },
+      }}
       asChild
     >
       <Pressable className="w-full">
@@ -31,5 +35,5 @@ export default function ActivityCard(props: { item: { id: string, name: string, 
         </View>
       </Pressable>
     </Link>
-  )
+  );
 }

@@ -39,9 +39,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="Timeline"
+        name="activities"
         options={{
-          title: "Tidslinje",
+          title: "Aktiviteter",
           tabBarIcon: ({ color }) => <TabBarIcon name="list" color={color} />,
         }}
       />
