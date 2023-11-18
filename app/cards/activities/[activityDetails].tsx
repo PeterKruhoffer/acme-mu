@@ -11,7 +11,7 @@ function ActivityDetails() {
   const [activities] = useAtom(activitiesAtom);
   const activity = activities.find(
     (item) => item?.item?.id === activityDetails
-    );
+  );
 
   return (
     <LinearGradient
